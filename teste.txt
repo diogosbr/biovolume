@@ -1,0 +1,32 @@
+Shape cod	Simulated shape	a	b	c	a1	a2	a3	a4	b1	b2	b3
+1-H	sphere	2									
+2-H	prolate spheroid	2	2								
+3-H	ellipsoid	2	2	2							
+4-H	cylinder	2		2							
+5-H	cylinder+2 half spheres	2	2								
+6-H	cylinder+2 cones	2	2								
+7-H	cone	2	2								
+8-H	double cone	2	2								
+9-H	cone + half sphere	2	2								
+10-H	rectangular box	2	2	2							
+11-H	prism on elliptic base	2	2	2							
+12-H	elliptic prism with transapical constriction	2	2	2							
+13-H	prism on parallelogram-base	2	2	2							
+14-H	half-elliptic prism	2	2	2							
+15-H	sickle-shaped prism	2	2	2							
+16-H	sickle-shaped cylinder	2	2								
+17-H	cymbelloid	2	2	2							
+18-H	prism on triangle-base	2		2							
+19-H	pyramid	2		2							
+20-H	elliptic prism with transapical inflation	2	2	2							
+21-H	gomphonemoid	2	2	2							
+22-SL	cone + half sphere + cylinder				2	2			2	2	
+23-SL	elliptic prism + 4 cone			2	2	2			2	2	
+24-SL	2 cylinder + elliptic prism	2	2	2							
+25-SL	ellipsoid + 2 cones + cylinder				2	2	2	2	2	2	
+26-SL	half sphere	2									
+27-SL	cone + 3 cylinder				2	2	2	2	2	2	2
+28-H	cylinder girdle view	2	2								
+29-H	prism on elliptic base girdle view	2	2	2							
+30-H	prism on triangle-base girdle view	2	2								
+31-SL	box + elliptic prism				8	3			1	1	
