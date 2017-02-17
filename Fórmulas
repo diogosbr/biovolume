@@ -147,11 +147,11 @@ A=(pi*a1*b1)+
 
 #23-SL	elliptic prism + 4 cone
 #volume
-V=((pi/4)*a1*b1*c1)+((pi/3)*a2*b2^2)
+V=((pi/4)*a1*b1*c)+((pi/3)*a2*b2^2)
 #area
 A=((pi/2)*a1*b1)+
-  ((pi/2)*b1*c1)+
-  ((pi/2)*a1*c1)+
+  ((pi/2)*b1*c)+
+  ((pi/2)*a1*c)+
   (pi*b2*(sqrt((4*a2^2)+(b2^2))-b2))
 
 #24-SL	2 cylinder + elliptic prism
@@ -162,9 +162,12 @@ A=(pi/2)*(a*b+b*c+a*c)
 
 #25-SL	ellipsoid + 2 cones + cylinder
 #volume
-
+V=((pi/4)*a2*(b2^2))+
+  ((pi/12)*(a3+a4)*b2^2)+
+  ((pi/6)*a1*b1*b2)
 #area
-
+A=((pi/4)*(b1+b2)*(((b1+b2)/2)+((a1)^2/sqrt((a1^2)-((b1+b2)/2)^2))*(sin(sqrt((a1^2)-((b1+b2)/2))/a1)^(-1))))+
+  ((pi/2)*b2*((2*a2^2)+(sqrt(a3^2+((b2^2)/4)))+(sqrt(a4^2+(b2^2)/4))-(b2)))
 
 #26-SL	half sphere
 #volume
@@ -174,9 +177,13 @@ A=((3*pi)/4)*a^2
 
 #27-SL	cone + 3 cylinder
 #volume
-
+V=((pi/4)*a2*(b2^2))+
+  ((pi/2)*a3*(b3^2))+
+  ((pi/12)*a1*((b1^2)+b1*b2+b2^2))
 #area
-
+A=((pi/2)*(b1+b2)*sqrt((a1^2)+((b1-b2)/2)^2))+
+  ((pi/4)*((b1^2)+(b2^2)))+
+  (2*pi*(a2*b2+a3*b3))
 
 #28-H	cylinder girdle view
 #volume
@@ -200,8 +207,6 @@ A=3*a*b+((sqrt(3)/2)*b^2)
 #volume
 V=c*((a1*b1)+((pi/4)*a2*b2))
 #area
-A=c*(
-  
-)+
-  ()+
-  
+A=c*(2*a1+b1+(pi/2)*a2+(pi/2)*b2)+
+  (2*a1*b1)+
+  ((pi/2)*a2*b2)
