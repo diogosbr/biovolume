@@ -1,4 +1,3 @@
-
 biovol= function(tab)
 {
   res=as.data.frame(matrix(ncol=3,nrow=dim(tab)[1]))
@@ -21,7 +20,7 @@ biovol= function(tab)
       #volume
       V=(pi/6)*b[i]^2*a[i]
       #area
-      A=(((pi*b[i])/2)*(b[i]+(a[i]^2/(sqrt(a[i]^2-b[i]^2))*
+      A=(((pi*b[i])/2)*(b[i]+((a[i]^2)/(sqrt(a[i]^2-b[i]^2))*
                                 sin(sqrt(a[i]^2-b[i]^2)/a[i])^(-1))))
       res[i,2]=V
       res[i,3]=A}
