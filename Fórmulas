@@ -1,0 +1,207 @@
+#Geometric models for calculating cell biovolume and surface area for phytoplankton
+#JUN SUN* AND DONGYAN LIU
+#(2003)
+
+#Fórmulas 
+
+# 1-H	sphere
+#volume
+V=(pi/6)*a^3
+#area
+A=pi*a^2
+
+# 2-H	prolate spheroid
+#volume
+V=(pi/6)*b^2*a
+#area
+A=(((pi*b)/2)*(b+(a^2/(sqrt(a^2-b^2))*sin(sqrt(a^2-b^2)/a)^(-1))))
+
+a^2/(sqrt(a^2-b^2))*sin(sqrt(a^2-b^2)/a)^(-1)
+
+# 3-H	ellipsoid
+#volume
+V=(pi/6)*a*b*c
+#area
+A=(pi/4)*(b+c)* (((b+c)/2)+2*a^2/(sqrt(4*a^2-(b+c)^2))*
+      sin((sqrt(4*a^2-(b+c)^2))/2*a)^(-1))
+
+# 4-H	cylinder
+#volume
+V=(pi/4)*(a^2)*c
+#area
+A=pi*a*((a/2)+c)
+
+# 5-H	cylinder+2 half spheres
+#volume
+V=pi*(b^2)*((a/4)-(b/12))
+#area
+A=pi*a*b
+
+# 6-H	cylinder+2 cones
+#volume
+V=(pi/4)*(b^2)*(a-(b/3))
+#area
+A=pi*b*(a-((4-sqrt(3))/4)*b)
+
+# 7-H	cone
+#volume
+V=(pi/12)*a*b^2
+#area
+A=(pi/4)*b*(b+sqrt(4*(a^2)+(b^2)))
+
+# 8-H	double cone
+#volume
+V=(pi/12)*a*b^2
+#area
+A=(pi/2)*b*sqrt((a^2)*(b^2))
+
+# 9-H	cone + half sphere
+#volume
+V=(pi/4)*a*(b^2)
+#area
+A=(pi/2)*(b^2)*(b+sqrt((2*(a^2)-(a*b)+(b^2))/2))
+
+# 10-H	rectangular box
+#volume
+V=a*b*c
+#area
+A=2*a*b+2*b*c+2*a*c
+
+# 11-H	prism on elliptic base
+#volume
+V=(pi/4)*a*b*c
+#area
+A=(pi/2)*(a*b+b*c+a*c)
+
+# 12-H	elliptic prism with transapical constriction
+#volume
+V=(pi/4)*a*b*c
+#area
+A=(pi/2)*(a*b+b*c+a*c)
+
+# 13-H	prism on parallelogram-base
+#volume
+V=(1/2)*a*b*c
+#area
+A=a*b+(sqrt((a^2)+(b^2))/4)*c
+
+# 14-H	half-elliptic prism
+#volume
+V=(pi/4)*a*b*c
+#area
+A=(pi/4)*(a*b+b*c+a*c)+(a*c)
+
+# 15-H	sickle-shaped prism
+#volume
+V=(pi/4)*a*b*c
+#area
+A=(pi/4)*(a*b+b*c+a*c)+(a*c)
+
+# 16-H	sickle-shaped cylinder
+#volume
+V=(pi/6)*a*b^2
+#area
+A=(pi/2)*b*sqrt((a^2)+(b^2))
+
+# 17-H	cymbelloid
+#volume
+V=(2/3)*a*(c^2)*sin(b/2*c)
+#area
+A=(pi/2)*a*c+b*(c+((a^2)/(2*sqrt((a^2)-4*(c^2))))*(sin(sqrt((a^2)-4*(c^2)))^(-1)))
+
+# 18-H	prism on triangle-base
+#volume
+V=(sqrt(3)/4)*c*(a^2)
+#area
+A=3*a*c+(sqrt(3)/2)*a^2
+
+# 19-H	pyramid
+#volume
+V=(1/6)*(a^2)*c
+#area
+A=(1/2)*(a^2)+a*sqrt((a^2)+8*(c^2))
+
+# 20-H	elliptic prism with transapical inflation
+#volume
+V=(pi/4)*a*b*c
+#area
+A=(pi/2)*(a*b+b*c+a*c)
+
+# 21-H	gomphonemoid
+#volume
+V=((a*b)/4)*(a+((pi/4)-1)*b)*asin(c/(2*a))
+#area
+A=(b/2)*((2*a)+(pi*a*sin(c/(2*a)))+(((pi/2)-2)*b))
+
+#22-SL	cone + half sphere + cylinder
+#volume
+V=((pi/3)*(a1+a2)*(b1^2))+
+  ((pi/4)*(a2+b2)*(b2^2))+
+  ((pi/12)*a2*b1*b2)
+#area
+A=(pi*a1*b1)+
+  ((pi/4)*b1^2)+
+  ((pi/2*b2^2))+
+  ((pi/2*b2^2)*sqrt((a1/b1)^2)+(1/4))-
+  ((pi/2)*b1*sqrt(((((a1*b2)/b1)-a1)^2)+((b1^2)/4)))
+
+#23-SL	elliptic prism + 4 cone
+#volume
+V=((pi/4)*a1*b1*c1)+((pi/3)*a2*b2^2)
+#area
+A=((pi/2)*a1*b1)+
+  ((pi/2)*b1*c1)+
+  ((pi/2)*a1*c1)+
+  (pi*b2*(sqrt((4*a2^2)+(b2^2))-b2))
+
+#24-SL	2 cylinder + elliptic prism
+#volume
+V=(pi/4)*a*b*c
+#area
+A=(pi/2)*(a*b+b*c+a*c)
+
+#25-SL	ellipsoid + 2 cones + cylinder
+#volume
+
+#area
+
+
+#26-SL	half sphere
+#volume
+V=(pi/12)*a^3
+#area
+A=((3*pi)/4)*a^2
+
+#27-SL	cone + 3 cylinder
+#volume
+
+#area
+
+
+#28-H	cylinder girdle view
+#volume
+V=(pi/4)*(b^2)*a
+#area
+A=pi*b*((b/2)+a)
+
+#29-H	prism on elliptic base girdle view
+#volume
+V=(pi/4)*a*b*c
+#area
+A=(pi/2)*(a*b+b*c+a*c)
+
+#30-H	prism on triangle-base girdle view
+#volume
+V=(sqrt(3)/4)*a*b^2
+#area
+A=3*a*b+((sqrt(3)/2)*b^2)
+
+#31-SL	box + elliptic prism
+#volume
+V=c*((a1*b1)+((pi/4)*a2*b2))
+#area
+A=c*(
+  
+)+
+  ()+
+  
