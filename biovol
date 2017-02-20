@@ -208,7 +208,7 @@ biovol= function(tab)
         ((pi/4)*b1[i]^2)+
         ((pi/2*b2[i]^2))+
         ((pi/2*b2[i]^2)*sqrt((a1[i]/b1[i])^2)+(1/4))-
-        ((pi[i]/2)*b1[i]*sqrt(((((a1[i]*b2[i])/b1[i])-a1[i])^2)+((b1[i]^2)/4)))
+        ((pi/2)*b1[i]*sqrt(((((a1[i]*b2[i])/b1[i])-a1[i])^2)+((b1[i]^2)/4)))
       res[i,2]=V
       res[i,3]=A}
     
