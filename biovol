@@ -9,19 +9,19 @@ biovol= function(tab)
     if(tab[i,1]=="1-H")
     { attach(tab)
       #volume
-      V=(pi/6)*a[i]^3
+      V=(pi/6)*(a[i]^3)
       #area
-      A=pi*a[i]^2
+      A=pi*(a[i]^2)
       res[i,2]=V
       res[i,3]=A}
     
     if(tab[i,1]=="2-H")
     { attach(tab)
       #volume
-      V=(pi/6)*b[i]^2*a[i]
+      V=(pi/6)*(b[i]^2)*(a[i])
       #area
-      A=(((pi*b[i])/2)*(b[i]+((a[i]^2)/(sqrt(a[i]^2-b[i]^2))*
-                                sin(sqrt(a[i]^2-b[i]^2)/a[i])^(-1))))
+      A=(((pi*b[i])/2)*(b[i]+(((a[i]^2)/(sqrt((a[i]^2)-(b[i]^2))))*
+                                sin(sqrt((a[i]^2)-(b[i]^2))/a[i])^(-1))))
       res[i,2]=V
       res[i,3]=A}
     
@@ -30,14 +30,14 @@ biovol= function(tab)
       #volume
       V=(pi/6)*a[i]*b[i]*c[i]
       #area
-      A=(pi/4)*(b[i]+c[i])* (((b[i]+c[i])/2)+2*a[i]^2/(sqrt(4*a[i]^2-(b[i]+c[i])^2))*
-                               sin((sqrt(4*a[i]^2-(b[i]+c[i])^2))/2*a[i])^(-1))
+      A=(pi/4)*(b[i]+c[i])* (((b[i]+c[i])/2)+(2*a[i]^2)/(sqrt((4*(a[i]^2))-((b[i]+c[i])^2)))*
+                               (sin((sqrt((4*(a[i]^2))-((b[i]+c[i])^2)))/(2*a[i]))^(-1)))
       res[i,2]=V
       res[i,3]=A}
     
     if(tab[i,1]=="4-H")
     { attach(tab)
-      #volume
+      #volume 
       V=(pi/4)*(a[i]^2)*c[i]
       #area
       A=pi*a[i]*((a[i]/2)+c[i])
@@ -155,9 +155,11 @@ biovol= function(tab)
     if(tab[i,1]=="17-H")
     { attach(tab)
       #volume
-      V=(2/3)*a[i]*(c[i]^2)*sin(b[i]/2*c[i])
+      V=(2/3)*a[i]*(c[i]^2)*sin(b[i]/(2*c[i]))
       #area
-      A=(pi/2)*a[i]*c[i]+b[i]*(c[i]+((a[i]^2)/(2*sqrt((a[i]^2)-4*(c[i]^2))))*(sin(sqrt((a[i]^2)-4*(c[i]^2)))^(-1)))
+      A=(pi/2)*a[i]*c[i]+(b[i]*(
+        c[i]+(((a[i]^2)/(2*sqrt((a[i]^2)-(4*(c[i]^2)))))*
+            (sin((sqrt(((a[i]^2)-(4*(c[i]^2)))/(a[i])))/(a[i]))^(-1)))))
       res[i,2]=V
       res[i,3]=A}
     
