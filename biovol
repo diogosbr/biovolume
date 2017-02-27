@@ -65,7 +65,7 @@ biovol= function(tab)
     if(tab[i,1]=="7-H")
     { attach(tab)
       #volume
-      V=(pi/12)*a[i]*b[i]^2
+      V=(pi/12)*a[i]*(b[i]^2)
       #area
       A=(pi/4)*b[i]*(b[i]+sqrt(4*(a[i]^2)+(b[i]^2)))
       res[i,2]=V
@@ -146,7 +146,7 @@ biovol= function(tab)
     if(tab[i,1]=="16-H")
     { attach(tab)
       #volume
-      V=(pi/6)*a[i]*b[i]^2
+      V=(pi/6)*a[i]*(b[i]^2)
       #area
       A=(pi/2)*b[i]*sqrt((a[i]^2)+(b[i]^2))
       res[i,2]=V
@@ -168,7 +168,7 @@ biovol= function(tab)
       #volume
       V=(sqrt(3)/4)*c[i]*(a[i]^2)
       #area
-      A=3*a[i]*c[i]+(sqrt(3)/2)*a[i]^2
+      A=3*a[i]*c[i]+(sqrt(3)/2)*(a[i]^2)
       res[i,2]=V
       res[i,3]=A}
     
