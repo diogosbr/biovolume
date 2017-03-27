@@ -4,10 +4,12 @@ biovol= function(tab)
   colnames(res)=c("Species","V","A")
   res[,1]=tab[,2]
   
+  attach(tab)
+
   for(i in 1:dim(tab)[1])
   {
     if(tab[i,1]=="1-H")
-    { attach(tab)
+    { 
       #volume
       V=(pi/6)*(a[i]^3)
       #area
@@ -16,7 +18,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="2-H")
-    { attach(tab)
+    { 
       #volume
       V=(pi/6)*(b[i]^2)*(a[i])
       #area
@@ -26,7 +28,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="3-H")
-    { attach(tab)
+    { 
       #volume
       V=(pi/6)*a[i]*b[i]*c[i]
       #area
@@ -36,7 +38,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="4-H")
-    { attach(tab)
+    { 
       #volume 
       V=(pi/4)*(a[i]^2)*c[i]
       #area
@@ -45,7 +47,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="5-H")
-    { attach(tab)
+    { 
       #volume
       V=pi*(b[i]^2)*((a[i]/4)-(b[i]/12))
       #area
@@ -54,7 +56,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="6-H")
-    { attach(tab)
+    { 
       #volume
       V=(pi/4)*(b[i]^2)*(a[i]-(b[i]/3))
       #area
@@ -63,7 +65,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="7-H")
-    { attach(tab)
+    { 
       #volume
       V=(pi/12)*a[i]*(b[i]^2)
       #area
@@ -72,7 +74,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="8-H")
-    { attach(tab)
+    { 
       #volume
       V=(pi/12)*a[i]*b[i]^2
       #area
@@ -81,7 +83,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="9-H")
-    { attach(tab)
+    { 
       #volume
       V=(pi/4)*a[i]*(b[i]^2)
       #area
@@ -90,7 +92,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="10-H")
-    { attach(tab)
+    { 
       #volume
       V=a[i]*b[i]*c[i]
       #area
@@ -99,7 +101,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="11-H")
-    { attach(tab)
+    { 
       #volume
       V=(pi/4)*a[i]*b[i]*c[i]
       #area
@@ -108,7 +110,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="12-H")
-    { attach(tab)
+    { 
       #volume
       V=(pi/4)*a[i]*b[i]*c[i]
       #area
@@ -117,7 +119,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="13-H")
-    { attach(tab)
+    { 
       #volume
       V=(1/2)*a[i]*b[i]*c[i]
       #area
@@ -126,7 +128,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="14-H")
-    { attach(tab)
+    { 
       #volume
       V=(pi/4)*a[i]*b[i]*c[i]
       #area
@@ -135,7 +137,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="15-H")
-    { attach(tab)
+    { 
       #volume
       V=(pi/4)*a[i]*b[i]*c[i]
       #area
@@ -144,7 +146,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="16-H")
-    { attach(tab)
+    { 
       #volume
       V=(pi/6)*a[i]*(b[i]^2)
       #area
@@ -153,7 +155,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="17-H")
-    { attach(tab)
+    { 
       #volume
       V=(2/3)*a[i]*(c[i]^2)*sin(b[i]/(2*c[i]))
       #area
@@ -164,7 +166,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="18-H")
-    { attach(tab)
+    { 
       #volume
       V=(sqrt(3)/4)*c[i]*(a[i]^2)
       #area
@@ -173,7 +175,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="19-H")
-    { attach(tab)
+    { 
       #volume
       V=(1/6)*(a[i]^2)*c[i]
       #area
@@ -182,7 +184,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="20-H")
-    { attach(tab)
+    { 
       #volume
       V=(pi/4)*a[i]*b[i]*c[i]
       #area
@@ -191,7 +193,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="21-H")
-    { attach(tab)
+    { 
       #volume
       V=((a[i]*b[i])/4)*(a[i]+((pi/4)-1)*b[i])*asin(c[i]/(2*a[i]))
       #area
@@ -200,7 +202,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="22-SL")
-    { attach(tab)
+    { 
       #volume
       V=((pi/3)*(a1[i]+a2[i])*(b1[i]^2))+
         ((pi/4)*(a2[i]+b2[i])*(b2[i]^2))+
@@ -215,7 +217,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="23-SL")
-    { attach(tab)
+    { 
       #volume
       V=((pi/4)*a1[i]*b1[i]*c[i])+((pi/3)*a2[i]*b2[i]^2)
       #area
@@ -227,7 +229,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="24-SL")
-    { attach(tab)
+    { 
       #volume
       V=(pi/4)*a[i]*b[i]*c[i]
       #area
@@ -236,7 +238,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="25-SL")
-    { attach(tab)
+    { 
       #volume
       V=((pi/4)*a2[i]*(b2[i]^2))+
         ((pi/12)*(a3[i]+a4[i])*b2[i]^2)+
@@ -248,7 +250,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="26-SL")
-    { attach(tab)
+    { 
       #volume
       V=(pi/12)*a[i]^3
       #area
@@ -257,7 +259,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="27-SL")
-    { attach(tab)
+    { 
       #volume
       V=((pi/4)*a2[i]*(b2[i]^2))+
         ((pi/2)*a3[i]*(b3[i]^2))+
@@ -270,7 +272,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="28-H")
-    { attach(tab)
+    { 
       #volume
       V=(pi/4)*(b[i]^2)*a[i]
       #area
@@ -279,7 +281,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="29-H")
-    { attach(tab)
+    { 
       #volume
       V=(pi/4)*a[i]*b[i]*c[i]
       #area
@@ -288,7 +290,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="30-H")
-    { attach(tab)
+    { 
       #volume
       V=(sqrt(3)/4)*a[i]*b[i]^2
       #area
@@ -297,7 +299,7 @@ biovol= function(tab)
       res[i,3]=A}
     
     if(tab[i,1]=="31-SL")
-    { attach(tab)
+    { 
       #volume
       V=c[i]*((a1[i]*b1[i])+((pi/4)*a2[i]*b2[i]))
       #area
@@ -309,6 +311,8 @@ biovol= function(tab)
     
     
   }
+  
+  detach(tab)
   
   print(res)
 }
